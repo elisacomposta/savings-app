@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RecordActivity"
+    android:padding="30dp">
+
+    <com.blackcat.currencyedittext.CurrencyEditText
+        android:id="@+id/amountDtl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Txt1"
+        android:id="@+id/amountVal"
+        android:layout_alignBaseline="@id/amountDtl"
+        android:textSize="20dp"
+        android:textColor="@color/colorPrimary"/>
+
+
+    <EditText
+        android:id="@+id/subjectDtl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/amountDtl"
+        android:hint="Subject"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Txt2"
+        android:id="@+id/subjectVal"
+        android:layout_alignBaseline="@id/subjectDtl"
+        android:textSize="20dp"
+        android:textColor="@color/colorPrimary"/>
+
+    <EditText
+        android:id="@+id/descriptionDtl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/subjectDtl"
+        android:hint="Description"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Txt3"
+        android:id="@+id/descriptionVal"
+        android:layout_alignBaseline="@id/descriptionDtl"
+        android:textSize="20dp"
+        android:textColor="@color/colorPrimary"/>
+
+    <TextView
+        android:id="@+id/earnedDtl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentEnd="true"
+        android:text="earned"
+        android:layout_alignBaseline="@+id/subjectDtl"/>
+
+    <Switch
+        android:id="@+id/switchDtl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@+id/earnedDtl"
+        android:layout_alignBaseline="@id/earnedDtl"/>
+
+    <TextView
+        android:id="@+id/dateVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/amountDtl"
+        android:layout_alignParentEnd="true"
+        android:text="DATE"
+        android:textSize="20dp"
+        android:textColor="@color/colorPrimary"/>
+
+    <Button
+        android:id="@+id/editBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:text="EDIT"
+        android:backgroundTint="@color/colorAccent"
+        android:textColor="@color/colorPrimary"/>
+
+    <Button
+        android:id="@+id/cancelDtlBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:text="CANCEL"
+        android:backgroundTint="@color/colorAccent"
+        android:textColor="@color/colorPrimary"/>
+
+    <Button
+        android:id="@+id/deleteBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="DELETE"
+        android:backgroundTint="@color/colorAccent"
+        android:textColor="@color/colorPrimary"/>
+
+
+</RelativeLayout>

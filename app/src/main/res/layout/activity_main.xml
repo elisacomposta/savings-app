@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/colorGrey">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="30dp"
+        android:src="@drawable/ic_add"
+        android:id="@+id/addBtn"
+        android:backgroundTint="@color/colorAccent"
+        android:elevation="30dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="25dp"
+        android:text="CREDIT"
+        android:textSize="70dp"
+        android:id="@+id/creditText"
+        android:textColor="@color/colorPrimary"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recordList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/creditText"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="300dp"
+        android:layout_height="220dp"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:elevation="30dp"
+        android:backgroundTint="@color/colorGrey"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp">
+
+            <com.blackcat.currencyedittext.CurrencyEditText
+                android:id="@+id/amountText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <EditText
+                android:id="@+id/subjectText"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/amountText"
+                android:hint="Subject" />
+
+            <EditText
+                android:id="@+id/descriptionText"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/subjectText"
+                android:hint="Description" />
+
+            <Switch
+                android:id="@+id/spentSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/selectedText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/descriptionText"
+                android:layout_alignBaseline="@id/spentSwitch"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/spentSwitch"
+                android:text="earned" />
+
+            <Button
+                android:id="@+id/okBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:text="OK"
+                android:backgroundTint="@color/colorAccent"
+                android:textColor="@color/colorPrimary"/>
+
+            <Button
+                android:id="@+id/cancelBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_above="@+id/okBtn"
+                android:layout_alignParentEnd="true"
+                android:text="CANCEL"
+                android:backgroundTint="@color/colorAccent"
+                android:textColor="@color/colorPrimary"/>
+
+            <TextView
+                android:id="@+id/dateText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/amountText"
+                android:layout_alignParentEnd="true"
+                android:text="DATA"
+                android:textSize="16dp" />
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
