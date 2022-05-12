@@ -1,4 +1,4 @@
-_Simple Android app to keep track of expenses and income, realized in 2019._
+_Simple Android app to keep track of expenses and income, realized in 2020._
 # Savings
 
 In the main activity, the remaining budget is shown, together with a list of all the activities.
